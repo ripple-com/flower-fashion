@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flower Fashion | Flowers With Love</title>
+
+<meta name="description" content="Flower Fashion - Beautiful flowers and gifts for your special moments.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #e96b91;
+    --dark-pink: #c74670;
+    --light-pink: #fff0f5;
+    --cream: #fffaf7;
+    --green: #526b4d;
+    --dark: #30242a;
+    --muted: #81737a;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans Sinhala', 'Noto Sans Tamil', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+body[lang="si"] {
+    font-family: 'Noto Sans Sinhala', sans-serif;
+}
+
+body[lang="ta"] {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,250,247,.97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 3px 20px rgba(0,0,0,.05);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--dark-pink);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.nav-button,
+.primary-button {
+    display: inline-block;
+    background: var(--pink);
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    padding: 12px 23px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: var(--dark-pink);
+    transform: translateY(-2px);
+}
+
+.language-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--light-pink);
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.lang-btn {
+    border: 0;
+    background: transparent;
+    color: var(--dark);
+    border-radius: 20px;
+    padding: 7px 9px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lang-btn.active {
+    background: var(--dark-pink);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 27px;
+    color: var(--dark-pink);
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(35,20,28,.76), rgba(35,20,28,.15)),
+        url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2000&q=90') center/cover;
+}
+
+.hero-content {
+    max-width: 680px;
+    padding: 80px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #ffe0e9;
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #ffb9ce;
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 540px;
+    color: #fff0f5;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.secondary-button {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 11px 23px;
+    color: white;
+    margin-left: 10px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: var(--dark);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.small-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--pink);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: clamp(30px, 5vw, 45px);
+    line-height: 1.4;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* COLLECTIONS */
+
+.collections {
+    background: white;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.collection-card {
+    background: var(--cream);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.collection-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(120,60,80,.12);
+}
+
+.card-image {
+    overflow: hidden;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.collection-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    padding: 23px;
+}
+
+.card-info h3 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--dark-pink);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    padding: 0 20px 20px 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 180px 180px 15px 15px;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: clamp(33px, 5vw, 46px);
+    line-height: 1.35;
+    margin: 15px 0;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.feature {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.feature span {
+    display: block;
+    font-size: 23px;
+}
+
+/* OCCASIONS */
+
+.occasions {
+    background: var(--light-pink);
+}
+
+.occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.occasion-card {
+    text-align: center;
+    background: white;
+    padding: 28px 15px;
+    border-radius: 14px;
+    transition: .3s;
+}
+
+.occasion-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(100,40,60,.09);
+}
+
+.occasion-card .icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.occasion-card h3 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.occasion-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* PROMO */
+
+.promo {
+    padding: 0;
+    color: white;
+    text-align: center;
+    background:
+        linear-gradient(rgba(69,36,49,.80), rgba(69,36,49,.80)),
+        url('https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+
+.promo-content {
+    padding: 90px 0;
+}
+
+.promo h2 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: clamp(34px, 6vw, 53px);
+    margin-bottom: 18px;
+}
+
+.promo p {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    font-size: 14px;
+    line-height: 2;
+    color: #ffeaf0;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: 'Playfair Display', 'Noto Sans Sinhala', 'Noto Sans Tamil', serif;
+    font-size: 27px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.contact-info > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--light-pink);
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.contact-item strong {
+    font-size: 13px;
+}
+
+.contact-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(100,40,60,.07);
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #f0dce4;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+    margin-bottom: 15px;
+    background: #fffdfd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--pink);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background: #30242a;
+    color: white;
+    padding: 55px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.footer-brand p {
+    color: #d7c6ce;
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 12px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.footer-column a {
+    display: block;
+    color: #d7c6ce;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-column a:hover {
+    color: #ffb9ce;
+}
+
+.footer-bottom {
+    border-top: 1px solid #514149;
+    padding-top: 20px;
+    text-align: center;
+    color: #d7c6ce;
+    font-size: 11px;
+}
+
+/* FACEBOOK BUTTON */
+
+.facebook-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 55px;
+    height: 55px;
+    background: #1877f2;
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    z-index: 900;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .occasion-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        min-height: 70px;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .language-box {
+        position: absolute;
+        top: 80px;
+        right: 5%;
+        z-index: 1002;
+        box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 15px 5%;
+        background: var(--cream);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,.05);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 11px 0;
+        font-size: 14px;
+    }
+
+    .nav-links .nav-button {
+        margin-top: 8px;
+        padding: 12px;
+    }
+
+    .hero {
+        min-height: 590px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .secondary-button {
+        margin: 12px 0 0;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .collection-grid,
+    .about-grid,
+    .contact-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card img {
+        height: 280px;
+    }
+
+    .about-image img {
+        height: 360px;
+    }
+
+    .about-text h2 {
+        font-size: 35px;
+    }
+
+    .occasion-grid {
+        gap: 12px;
+    }
+
+    .occasion-card {
+        padding: 20px 10px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .promo-content {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 17px;
+    }
+
+    .lang-btn {
+        padding: 6px 7px;
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .occasion-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body lang="en">
+
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">Flower <span>Fashion</span> 🌸</a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" data-i18n="navHome">Home</a>
+            <a href="#collections" data-i18n="navCollections">Collections</a>
+            <a href="#about" data-i18n="navAbout">About Us</a>
+            <a href="#occasions" data-i18n="navOccasions">Occasions</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+
+            <a href="https://www.facebook.com/" class="nav-button facebook-link"
+               target="_blank" rel="noopener" data-i18n="navFacebook">
+                Visit Facebook ↗
+            </a>
+        </nav>
+
+        <div class="language-box" aria-label="Select language">
+            <button class="lang-btn" data-lang="si" aria-label="සිංහල">සිං</button>
+            <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+            <button class="lang-btn" data-lang="ta" aria-label="தமிழ்">தமிழ்</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">☰</button>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <span class="eyebrow" data-i18n="heroEyebrow">
+                A Little Beauty In Every Bloom
+            </span>
+
+            <h1 data-i18n="heroTitle">
+                Flowers That<br>Speak <span>Love.</span>
+            </h1>
+
+            <p data-i18n="heroText">
+                Make every moment unforgettable with beautiful flowers.
+                Discover thoughtful floral gifts and special surprises made with love.
+            </p>
+
+            <a href="#collections" class="primary-button" data-i18n="heroButton">
+                Explore Collections →
+            </a>
+
+            <a href="#contact" class="secondary-button" data-i18n="heroContact">
+                Contact Us
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- COLLECTIONS -->
+
+<section class="collections" id="collections">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="small-title" data-i18n="collectionEyebrow">Our Collection</span>
+            <h2 data-i18n="collectionTitle">Find Your Perfect Bloom</h2>
+            <p data-i18n="collectionText">Beautiful flowers for every feeling and every special moment.</p>
+        </div>
+
+        <div class="collection-grid">
+
+            <article class="collection-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85"
+                         alt="Rose bouquet" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 data-i18n="roseTitle">Rose Bouquets 🌹</h3>
+                    <p data-i18n="roseText">Elegant roses that express love and heartfelt emotions.</p>
+                    <a href="#contact" class="card-link" data-i18n="orderText">Ask About This Collection ↗</a>
+                </div>
+            </article>
+
+            <article class="collection-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85"
+                         alt="Colorful flowers" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 data-i18n="freshTitle">Fresh Flowers 💐</h3>
+                    <p data-i18n="freshText">Colorful floral arrangements to brighten someone's day.</p>
+                    <a href="#contact" class="card-link" data-i18n="orderText">Ask About This Collection ↗</a>
+                </div>
+            </article>
+
+            <article class="collection-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=85"
+                         alt="Pink flowers" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 data-i18n="giftTitle">Special Gifts 🎁</h3>
+                    <p data-i18n="giftText">Thoughtful floral gifts for birthdays and anniversaries.</p>
+                    <a href="#contact" class="card-link" data-i18n="orderText">Ask About This Collection ↗</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container about-grid">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1000&q=85"
+                 alt="Beautiful flower arrangement" loading="lazy">
+        </div>
+
+        <div class="about-text">
+            <span class="small-title" data-i18n="aboutEyebrow">Our Story</span>
+
+            <h2 data-i18n="aboutTitle">Made With Love, Inspired By Nature.</h2>
+
+            <p data-i18n="aboutText1">
+                Welcome to Flower Fashion — a little corner of beauty, flowers and happiness.
+                We believe flowers can express feelings that words sometimes cannot.
+            </p>
+
+            <p data-i18n="aboutText2">
+                Celebrate love, surprise someone special, and make your moments memorable with flowers.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <span>🌷</span>
+                    <span data-i18n="feature1">Beautiful Designs</span>
+                </div>
+
+                <div class="feature">
+                    <span>💗</span>
+                    <span data-i18n="feature2">Made With Love</span>
+                </div>
+
+                <div class="feature">
+                    <span>🎁</span>
+                    <span data-i18n="feature3">Special Gifts</span>
+                </div>
+
+                <div class="feature">
+                    <span>✨</span>
+                    <span data-i18n="feature4">Memorable Moments</span>
+                </div>
+            </div>
+
+            <a href="#contact" class="primary-button" data-i18n="aboutButton">
+                Let's Talk Flowers →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- OCCASIONS -->
+
+<section class="occasions" id="occasions">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="small-title" data-i18n="occasionEyebrow">Made For Your Moments</span>
+            <h2 data-i18n="occasionTitle">Flowers For Every Occasion</h2>
+            <p data-i18n="occasionText">Make the moments that matter even more special.</p>
+        </div>
+
+        <div class="occasion-grid">
+
+            <div class="occasion-card">
+                <div class="icon">❤️</div>
+                <h3 data-i18n="loveTitle">Love & Romance</h3>
+                <p data-i18n="loveText">Share your feelings with a beautiful floral surprise.</p>
+            </div>
+
+            <div class="occasion-card">
+                <div class="icon">🎂</div>
+                <h3 data-i18n="birthdayTitle">Birthdays</h3>
+                <p data-i18n="birthdayText">Add happiness to someone's special day.</p>
+            </div>
+
+            <div class="occasion-card">
+                <div class="icon">💍</div>
+                <h3 data-i18n="anniversaryTitle">Anniversaries</h3>
+                <p data-i18n="anniversaryText">Celebrate your memories with flowers and love.</p>
+            </div>
+
+            <div class="occasion-card">
+                <div class="icon">🌸</div>
+                <h3 data-i18n="justBecauseTitle">Just Because</h3>
+                <p data-i18n="justBecauseText">Give flowers simply to make someone smile.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROMOTION -->
+
+<section class="promo">
+    <div class="container promo-content">
+
+        <span class="eyebrow" data-i18n="promoEyebrow">A Gift From The Heart</span>
+
+        <h2 data-i18n="promoTitle">Say It With Flowers.</h2>
+
+        <p data-i18n="promoText">
+            Every flower tells a story. Find a beautiful way to express your feelings.
+        </p>
+
+        <a href="https://www.facebook.com/" class="primary-button facebook-link"
+           target="_blank" rel="noopener" data-i18n="promoButton">
+            Discover Us On Facebook ↗
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="small-title" data-i18n="contactEyebrow">Get In Touch</span>
+            <h2 data-i18n="contactTitle">Let's Make Something Beautiful</h2>
+            <p data-i18n="contactSubtitle">Have a question? Send us a message.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3 data-i18n="contactHeading">We'd Love To Hear From You 💗</h3>
+
+                <p data-i18n="contactText">
+                    Contact Flower Fashion to ask about our collections, gift ideas and special arrangements.
+                </p>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💌</div>
+                    <div>
+                        <strong data-i18n="facebookLabel">Facebook Page</strong>
+                        <p data-i18n="facebookDescription">Send us a message on Facebook.</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🌷</div>
+                    <div>
+                        <strong data-i18n="requestLabel">Special Requests</strong>
+                        <p data-i18n="requestDescription">Tell us what kind of flowers you love.</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🎁</div>
+                    <div>
+                        <strong data-i18n="giftLabel">Gift Ideas</strong>
+                        <p data-i18n="giftDescription">Let's find something beautiful together.</p>
+                    </div>
+                </div>
+
+                <a href="https://www.facebook.com/" class="primary-button facebook-link"
+                   target="_blank" rel="noopener" data-i18n="messageButton">
+                    Message Us On Facebook ↗
+                </a>
+
+            </div>
+
+            <form class="contact-form" id="contactForm">
+
+                <h3 data-i18n="formTitle">Send An Inquiry</h3>
+
+                <input type="text" id="customerName" data-i18n-placeholder="namePlaceholder" placeholder="Your Name" required>
+
+                <input type="email" id="customerEmail" data-i18n-placeholder="emailPlaceholder" placeholder="Your Email Address" required>
+
+                <input type="text" id="flowerType" data-i18n-placeholder="interestPlaceholder" placeholder="What are you looking for?">
+
+                <textarea id="customerMessage" data-i18n-placeholder="messagePlaceholder" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="primary-button" data-i18n="sendButton">
+                    Send Inquiry ↗
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="#home" class="logo">Flower <span>Fashion</span> 🌸</a>
+                <p data-i18n="footerText">
+                    Bringing beauty, love and happiness into every special moment — one flower at a time.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footerQuick">Quick Links</h4>
+                <a href="#home" data-i18n="navHome">Home</a>
+                <a href="#collections" data-i18n="navCollections">Collections</a>
+                <a href="#about" data-i18n="navAbout">About Us</a>
+                <a href="#occasions" data-i18n="navOccasions">Occasions</a>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footerConnect">Connect With Us</h4>
+                <a href="https://www.facebook.com/" class="facebook-link"
+                   target="_blank" rel="noopener" data-i18n="navFacebook">Visit Facebook ↗</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> Flower Fashion. <span data-i18n="copyright">Made with love 💗</span>
+        </div>
+
+    </div>
+</footer>
+
+<a href="https://www.facebook.com/" class="facebook-float facebook-link"
+   target="_blank" rel="noopener" aria-label="Facebook">f</a>
+
+<script>
+/* ====================================
+   FLOWER FASHION - THREE LANGUAGES
+   Sinhala / English / Tamil
+   ==================================== */
+
+/* Replace with the real Flower Fashion Facebook page URL */
+const FACEBOOK_PAGE_URL = "https://www.facebook.com/";
+
+/* Translation dictionary */
+const translations = {
+
+si: {
+    navHome: "මුල් පිටුව",
+    navCollections: "මල් එකතුව",
+    navAbout: "අපි ගැන",
+    navOccasions: "විශේෂ අවස්ථා",
+    navContact: "අප අමතන්න",
+    navFacebook: "Facebook පිටුව ↗",
+
+    heroEyebrow: "සෑම මලකම සුන්දරත්වයක්",
+    heroTitle: "ආදරය කියන<br><span>මල්.</span>",
+    heroText: "ලස්සන මල් සමඟ ඔබේ සෑම මොහොතක්ම අමතක නොවන මොහොතක් කරගන්න. ආදරයෙන් සකස් කළ මල් සහ තෑගි එකතුව දැන් බලන්න.",
+    heroButton: "මල් එකතුව බලන්න →",
+    heroContact: "අප අමතන්න",
+
+    collectionEyebrow: "අපේ මල් එකතුව",
+    collectionTitle: "ඔබ කැමතිම මල් තෝරන්න",
+    collectionText: "සෑම හැඟීමකටම සහ විශේෂ මොහොතකටම ලස්සන මල්.",
+    roseTitle: "රෝස මල් 🌹",
+    roseText: "ආදරය සහ හදවතේ හැඟීම් ප්‍රකාශ කරන සුන්දර රෝස මල්.",
+    freshTitle: "නැවුම් මල් 💐",
+    freshText: "ඔබ ආදරය කරන කෙනෙකුගේ දවස ලස්සන කරන මල්.",
+    giftTitle: "විශේෂ තෑගි 🎁",
+    giftText: "උපන්දිනයට සහ සංවත්සරයට සුදුසු ආදරණීය තෑගි.",
+    orderText: "විස්තර විමසන්න ↗",
+
+    aboutEyebrow: "අපේ කතාව",
+    aboutTitle: "ආදරයෙන් නිමවූ, සොබාදහමෙන් ආභාසය ලැබූ.",
+    aboutText1: "Flower Fashion වෙත සාදරයෙන් පිළිගනිමු. සුන්දරත්වය, මල් සහ සතුට පිරුණු අපේ පුංචි ලෝකයට ඔබව ආදරයෙන් පිළිගන්නවා. සමහර හැඟීම් වචනවලට වඩා මල්වලින් ලස්සනට කියන්න පුළුවන්.",
+    aboutText2: "ආදරය සමරන්න, විශේෂ කෙනෙකු පුදුම කරන්න, ඔබේ සුන්දර මොහොත තවත් මතකයේ රැඳෙන එකක් කරන්න.",
+    feature1: "ලස්සන නිර්මාණ",
+    feature2: "ආදරයෙන් නිම කළ",
+    feature3: "විශේෂ තෑගි",
+    feature4: "අමතක නොවන මතක",
+    aboutButton: "මල් ගැන කතා කරමු →",
+
+    occasionEyebrow: "ඔබේ විශේෂ මොහොතට",
+    occasionTitle: "සෑම අවස්ථාවකටම මල්",
+    occasionText: "ඔබට වැදගත් සෑම මොහොතක්ම තවත් සුන්දර කරගන්න.",
+    loveTitle: "ආදරය",
+    loveText: "ලස්සන මල් තෑග්ගකින් ඔබේ හැඟීම් කියන්න.",
+    birthdayTitle: "උපන්දිනය",
+    birthdayText: "විශේෂ දිනයකට තවත් සතුටක් එකතු කරන්න.",
+    anniversaryTitle: "සංවත්සරය",
+    anniversaryText: "ආදරය සහ මල් සමඟ ඔබේ මතක සමරන්න.",
+    justBecauseTitle: "සතුට වෙනුවෙන්",
+    justBecauseText: "කෙනෙකුගේ මුහුණට සිනහවක් ගේන්න මල් තෑගි කරන්න.",
+
+    promoEyebrow: "හදවතින් දෙන තෑග්ගක්",
+    promoTitle: "මල්වලින් ආදරය කියන්න.",
+    promoText: "සෑම මලකටම කතාවක් තිබෙනවා. ඔබේ හැඟීම් ප්‍රකාශ කිරීමට ලස්සන ක්‍රමයක් තෝරගන්න.",
+    promoButton: "Facebook පිටුව බලන්න ↗",
+
+    contactEyebrow: "අප හා සම්බන්ධ වන්න",
+    contactTitle: "අපි එකතු වී සුන්දර දෙයක් කරමු",
+    contactSubtitle: "ප්‍රශ්නයක් තිබෙනවාද? අපට පණිවිඩයක් එවන්න.",
+    contactHeading: "ඔබ සමඟ කතා කිරීමට අපි කැමතියි 💗",
+    contactText: "අපේ මල් එකතු, තෑගි සහ විශේෂ නිර්මාණ පිළිබඳ විස්තර දැනගැනීමට අප අමතන්න.",
+    facebookLabel: "Facebook පිටුව",
+    facebookDescription: "Facebook හරහා පණිවිඩයක් එවන්න.",
+    requestLabel: "විශේෂ ඉල්ලීම්",
+    requestDescription: "ඔබ කැමති මල් වර්ගය අපට කියන්න.",
+    giftLabel: "තෑගි අදහස්",
+    giftDescription: "ඔබට ගැළපෙන සුන්දර තෑග්ගක් තෝරමු.",
+    messageButton: "Facebook හරහා පණිවිඩයක් එවන්න ↗",
+    formTitle: "විමසීමක් එවන්න",
+    namePlaceholder: "ඔබේ නම",
+    emailPlaceholder: "ඔබේ Email ලිපිනය",
+    interestPlaceholder: "ඔබට අවශ්‍ය කුමක්ද?",
+    messagePlaceholder: "ඔබේ පණිවිඩය මෙහි ලියන්න...",
+    sendButton: "විමසීම යොමු කරන්න ↗",
+
+    footerText: "සෑම විශේෂ මොහොතකටම සුන්දරත්වය, ආදරය සහ සතුට එක් කරමු.",
+    footerQuick: "ඉක්මන් සබැඳි",
+    footerConnect: "අප හා සම්බන්ධ වන්න",
+    copyright: "ආදරයෙන් නිම කළෙමු 💗",
+
+    alertTitle: "කරුණාකර ඔබේ නම, Email ලිපිනය සහ පණිවිඩය ඇතුළත් කරන්න.",
+    alertEmail: "කරුණාකර නිවැරදි Email ලිපිනයක් ඇතුළත් කරන්න.",
+    alertSending: "ඔබේ Email app එක විවෘත කරනවා. එහි Send බොත්තම ඔබන්න."
+},
+
+en: {
+    navHome: "Home",
+    navCollections: "Collections",
+    navAbout: "About Us",
+    navOccasions: "Occasions",
+    navContact: "Contact",
+    navFacebook: "Visit Facebook ↗",
+
+    heroEyebrow: "A Little Beauty In Every Bloom",
+    heroTitle: "Flowers That<br>Speak <span>Love.</span>",
+    heroText: "Make every moment unforgettable with beautiful flowers. Discover thoughtful floral gifts and special surprises made with love.",
+    heroButton: "Explore Collections →",
+    heroContact: "Contact Us",
+
+    collectionEyebrow: "Our Collection",
+    collectionTitle: "Find Your Perfect Bloom",
+    collectionText: "Beautiful flowers for every feeling and every special moment.",
+    roseTitle: "Rose Bouquets 🌹",
+    roseText: "Elegant roses that express love and heartfelt emotions.",
+    freshTitle: "Fresh Flowers 💐",
+    freshText: "Colorful flowers to brighten someone's day.",
+    giftTitle: "Special Gifts 🎁",
+    giftText: "Thoughtful floral gifts for birthdays and anniversaries.",
+    orderText: "Ask About This Collection ↗",
+
+    aboutEyebrow: "Our Story",
+    aboutTitle: "Made With Love, Inspired By Nature.",
+    aboutText1: "Welcome to Flower Fashion — a little corner of beauty, flowers and happiness. We believe flowers can express feelings that words sometimes cannot.",
+    aboutText2: "Celebrate love, surprise someone special, and make your moments memorable with flowers.",
+    feature1: "Beautiful Designs",
+    feature2: "Made With Love",
+    feature3: "Special Gifts",
+    feature4: "Memorable Moments",
+    aboutButton: "Let's Talk Flowers →",
+
+    occasionEyebrow: "Made For Your Moments",
+    occasionTitle: "Flowers For Every Occasion",
+    occasionText: "Make the moments that matter even more special.",
+    loveTitle: "Love & Romance",
+    loveText: "Share your feelings with a beautiful floral surprise.",
+    birthdayTitle: "Birthdays",
+    birthdayText: "Add happiness to someone's special day.",
+    anniversaryTitle: "Anniversaries",
+    anniversaryText: "Celebrate your memories with flowers and love.",
+    justBecauseTitle: "Just Because",
+    justBecauseText: "Give flowers simply to make someone smile.",
+
+    promoEyebrow: "A Gift From The Heart",
+    promoTitle: "Say It With Flowers.",
+    promoText: "Every flower tells a story. Find a beautiful way to express your feelings.",
+    promoButton: "Discover Us On Facebook ↗",
+
+    contactEyebrow: "Get In Touch",
+    contactTitle: "Let's Make Something Beautiful",
+    contactSubtitle: "Have a question? Send us a message.",
+    contactHeading: "We'd Love To Hear From You 💗",
+    contactText: "Contact Flower Fashion to ask about our collections, gift ideas and special arrangements.",
+    facebookLabel: "Facebook Page",
+    facebookDescription: "Send us a message on Facebook.",
+    requestLabel: "Special Requests",
+    requestDescription: "Tell us what kind of flowers you love.",
+    giftLabel: "Gift Ideas",
+    giftDescription: "Let's find something beautiful together.",
+    messageButton: "Message Us On Facebook ↗",
+    formTitle: "Send An Inquiry",
+    namePlaceholder: "Your Name",
+    emailPlaceholder: "Your Email Address",
+    interestPlaceholder: "What are you looking for?",
+    messagePlaceholder: "Write your message here...",
+    sendButton: "Send Inquiry ↗",
+
+    footerText: "Bringing beauty, love and happiness into every special moment — one flower at a time.",
+    footerQuick: "Quick Links",
+    footerConnect: "Connect With Us",
+    copyright: "Made with love 💗",
+
+    alertTitle: "Please enter your name, email address and message.",
+    alertEmail: "Please enter a valid email address.",
+    alertSending: "Opening your email app. Please press Send there."
+},
+
+ta: {
+    navHome: "முகப்பு",
+    navCollections: "மலர் தொகுப்புகள்",
+    navAbout: "எங்களைப் பற்றி",
+    navOccasions: "சிறப்பு நிகழ்வுகள்",
+    navContact: "தொடர்பு",
+    navFacebook: "Facebook பக்கம் ↗",
+
+    heroEyebrow: "ஒவ்வொரு மலரிலும் அழகு",
+    heroTitle: "காதலைச் சொல்லும்<br><span>மலர்கள்.</span>",
+    heroText: "அழகான மலர்களுடன் ஒவ்வொரு தருணத்தையும் மறக்க முடியாததாக மாற்றுங்கள். அன்புடன் தயாரிக்கப்பட்ட மலர் பரிசுகளையும் சிறப்பு ஆச்சரியங்களையும் கண்டறியுங்கள்.",
+    heroButton: "மலர் தொகுப்புகளைப் பாருங்கள் →",
+    heroContact: "எங்களைத் தொடர்புகொள்ளுங்கள்",
+
+    collectionEyebrow: "எங்கள் தொகுப்பு",
+    collectionTitle: "உங்களுக்குப் பிடித்த மலர்களைத் தேர்ந்தெடுங்கள்",
+    collectionText: "ஒவ்வொரு உணர்வுக்கும் சிறப்பு தருணத்திற்கும் அழகான மலர்கள்.",
+    roseTitle: "ரோஜா மலர் கொத்துகள் 🌹",
+    roseText: "காதலையும் மனமார்ந்த உணர்வுகளையும் வெளிப்படுத்தும் ரோஜாக்கள்.",
+    freshTitle: "புதிய மலர்கள் 💐",
+    freshText: "ஒருவரின் நாளை மகிழ்ச்சியாக்கும் வண்ணமயமான மலர்கள்.",
+    giftTitle: "சிறப்புப் பரிசுகள் 🎁",
+    giftText: "பிறந்தநாள் மற்றும் ஆண்டு விழாக்களுக்கான அழகான பரிசுகள்.",
+    orderText: "இந்தத் தொகுப்பைப் பற்றி கேளுங்கள் ↗",
+
+    aboutEyebrow: "எங்கள் கதை",
+    aboutTitle: "அன்புடன் உருவாக்கப்பட்டது, இயற்கையால் ஈர்க்கப்பட்டது.",
+    aboutText1: "Flower Fashion-க்கு உங்களை அன்புடன் வரவேற்கிறோம். அழகு, மலர்கள் மற்றும் மகிழ்ச்சி நிறைந்த எங்கள் சிறிய உலகம் இது. சில உணர்வுகளை வார்த்தைகளை விட மலர்கள் அழகாகச் சொல்லும் என்று நாங்கள் நம்புகிறோம்.",
+    aboutText2: "காதலைக் கொண்டாடுங்கள், உங்களுக்குப் பிடித்தவரை ஆச்சரியப்படுத்துங்கள், மலர்களால் உங்கள் தருணங்களை நினைவாக மாற்றுங்கள்.",
+    feature1: "அழகான வடிவமைப்புகள்",
+    feature2: "அன்புடன் தயாரிக்கப்பட்டவை",
+    feature3: "சிறப்புப் பரிசுகள்",
+    feature4: "மறக்க முடியாத தருணங்கள்",
+    aboutButton: "மலர்களைப் பற்றிப் பேசுவோம் →",
+
+    occasionEyebrow: "உங்கள் சிறப்புத் தருணங்களுக்கு",
+    occasionTitle: "ஒவ்வொரு நிகழ்விற்கும் மலர்கள்",
+    occasionText: "உங்களுக்கு முக்கியமான தருணங்களை இன்னும் சிறப்பாக்குங்கள்.",
+    loveTitle: "காதல்",
+    loveText: "அழகான மலர் பரிசுடன் உங்கள் உணர்வுகளை வெளிப்படுத்துங்கள்.",
+    birthdayTitle: "பிறந்தநாள்",
+    birthdayText: "ஒருவரின் சிறப்பு நாளில் மகிழ்ச்சியைச் சேருங்கள்.",
+    anniversaryTitle: "ஆண்டு விழா",
+    anniversaryText: "மலர்களுடனும் அன்புடனும் உங்கள் நினைவுகளைக் கொண்டாடுங்கள்.",
+    justBecauseTitle: "மகிழ்ச்சிக்காக",
+    justBecauseText: "ஒருவரின் முகத்தில் புன்னகையை வரவழைக்க மலர்களைப் பரிசளியுங்கள்.",
+
+    promoEyebrow: "இதயத்திலிருந்து வரும் பரிசு",
+    promoTitle: "மலர்களால் அன்பைச் சொல்லுங்கள்.",
+    promoText: "ஒவ்வொரு மலரும் ஒரு கதையைச் சொல்கிறது. உங்கள் உணர்வுகளை அழகாக வெளிப்படுத்துங்கள்.",
+    promoButton: "எங்கள் Facebook பக்கத்தைப் பாருங்கள் ↗",
+
+    contactEyebrow: "தொடர்புகொள்ளுங்கள்",
+    contactTitle: "அழகான ஒன்றை ஒன்றாக உருவாக்குவோம்",
+    contactSubtitle: "ஏதேனும் கேள்வி உள்ளதா? எங்களுக்கு செய்தி அனுப்புங்கள்.",
+    contactHeading: "உங்களிடமிருந்து செய்தி பெற விரும்புகிறோம் 💗",
+    contactText: "எங்கள் மலர் தொகுப்புகள், பரிசுகள் மற்றும் சிறப்பு அலங்காரங்களைப் பற்றி அறிய எங்களைத் தொடர்புகொள்ளுங்கள்.",
+    facebookLabel: "Facebook பக்கம்",
+    facebookDescription: "Facebook மூலம் எங்களுக்கு செய்தி அனுப்புங்கள்.",
+    requestLabel: "சிறப்பு கோரிக்கைகள்",
+    requestDescription: "உங்களுக்குப் பிடித்த மலர்களைப் பற்றிச் சொல்லுங்கள்.",
+    giftLabel: "பரிசு யோசனைகள்",
+    giftDescription: "உங்களுக்குப் பொருத்தமான அழகான பரிசைத் தேர்ந்தெடுப்போம்.",
+    messageButton: "Facebook மூலம் செய்தி அனுப்புங்கள் ↗",
+    formTitle: "விசாரணையை அனுப்புங்கள்",
+    namePlaceholder: "உங்கள் பெயர்",
+    emailPlaceholder: "உங்கள் மின்னஞ்சல் முகவரி",
+    interestPlaceholder: "உங்களுக்கு என்ன தேவை?",
+    messagePlaceholder: "உங்கள் செய்தியை இங்கே எழுதுங்கள்...",
+    sendButton: "விசாரணையை
